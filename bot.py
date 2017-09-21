@@ -124,10 +124,10 @@ def main():
         send_data_message()
 
 
-    #d = get_updates()
+    d = get_updates()
 
-    #with open('updates.json', 'w') as file:
-    #     json.dump(d, file, indent=2, ensure_ascii=False)
+    with open('updates.json', 'w') as file:
+         json.dump(d, file, indent=2, ensure_ascii=False)
 
 
 if __name__ == '__main__':
