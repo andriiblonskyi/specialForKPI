@@ -16,16 +16,6 @@ chat_followers = []
 
 URL = 'https://api.telegram.org/bot' + token + '/'
 
-DATAURL = 'http://52.11.73.180:8080/api/{}/lastSensorsValue'
-DATATIMEURL = 'http://52.11.73.180:8080/api/{}/last'
-
-def get_updates():
-    url = URL + 'getupdates'
-    r = requests.get(url)
-    return r.json()
-
-def get_message():
-    data = get_updates()
 
     chat_id = data['result'][-1]['message']['chat']['id']
     message_text = data['result'][-1]['message']['text']
@@ -68,7 +58,7 @@ def chat_followers_controller():
         if text == '/end':
             chat_followers.remove(chat_id)
         i -= 1
-        sleep(600)
+        sleep(300)
 
 
 def make_massage(parsed_json):
