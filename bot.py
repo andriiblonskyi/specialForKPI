@@ -108,7 +108,7 @@ def main():
     #d = get_updates()
 
     #with open('updates.json', 'w') as file:
-         #json.dump(d, file, indent=2, ensure_ascii=False)
+    #     json.dump(d, file, indent=2, ensure_ascii=False)
 
 
 if __name__ == '__main__':
