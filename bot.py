@@ -49,7 +49,7 @@ def chat_followers_controller():
         if text == '/end':
             chat_followers.remove(chat_id)
         i -= 1
-        sleep(600)
+        sleep(300)
 
 
 def make_massage(parsed_json):
