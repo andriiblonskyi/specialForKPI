@@ -6,7 +6,26 @@ from time import sleep
 
 token = misc.token
 
+static_chat_Andrii = misc.static_chat_Andrii
+static_chat_Denis = misc.static_chat_Denis
+static_chat_Alexander = misc.static_chat_Alexander
+static_chat_Alexander2 = misc.static_chat_Alexander2
+static_chat_Group = misc.static_chat_Group
 
+chat_followers = []
+
+URL = 'https://api.telegram.org/bot' + token + '/'
+
+DATAURL = 'http://52.11.73.180:8080/api/{}/lastSensorsValue'
+DATATIMEURL = 'http://52.11.73.180:8080/api/{}/last'
+
+def get_updates():
+    url = URL + 'getupdates'
+    r = requests.get(url)
+    return r.json()
+
+def get_message():
+    data = get_updates()
 
     chat_id = data['result'][-1]['message']['chat']['id']
     message_text = data['result'][-1]['message']['text']
@@ -108,7 +127,7 @@ def main():
     #d = get_updates()
 
     #with open('updates.json', 'w') as file:
-         #json.dump(d, file, indent=2, ensure_ascii=False)
+    #     json.dump(d, file, indent=2, ensure_ascii=False)
 
 
 if __name__ == '__main__':
