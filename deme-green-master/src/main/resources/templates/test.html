@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<link xmlns:th="http://www.thymeleaf.org">
+<link>
+    <title>GreenBee Web Panel</title>
+    <meta charset="utf-8" />
+    <script
+            src="http://code.jquery.com/jquery-2.2.4.js"
+            integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+            crossorigin="anonymous"></script>
+    <script
+            src="http://code.jquery.com/jquery-2.2.4.js"
+            integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"></link>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cldrjs/0.4.4/cldr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cldrjs/0.4.4/cldr/event.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cldrjs/0.4.4/cldr/supplemental.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cldrjs/0.4.4/cldr/unresolved.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/globalize/1.1.1/globalize.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/globalize/1.1.1/globalize/message.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/globalize/1.1.1/globalize/number.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/globalize/1.1.1/globalize/currency.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/globalize/1.1.1/globalize/date.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/17.1.5/css/dx.spa.css" ></link>
+    <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/17.1.5/css/dx.common.css" ></link>
+    <link rel="dx-theme" data-theme="generic.dark" href="https://cdn3.devexpress.com/jslib/17.1.5/css/dx.dark.css"></link>
+    <script src="https://cdn3.devexpress.com/jslib/17.1.5/js/dx.all.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"></link>
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans'></link>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"></link>
+    <link rel="stylesheet"
+          href="../static/css/web-panel.css"></link>
+    <style>
+        .options {
+            padding: 20px;
+            background-color: black;
+            margin-top: 20px;
+        }
+
+        .option {
+            margin-top: 10px;
+        }
+
+        .caption {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .option > span {
+            margin-right: 10px;
+        }
+
+        .option > .dx-widget {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <li class="active"><a id ="user-name-title" class="navbar-brand" style="color:green; cursor: default;"><span class="glyphicon glyphicon-user"></span> </a></li>
+        </div>
+        <form class="navbar-form navbar-right">
+            <div class="form-group" style="width: 250px;">
+                <input type="text" id="search-input" style="width: 250px;" class="form-control" placeholder="Введите имя устройства.."></input>
+            </div>
+            <button class="btn btn-default" onclick="findDevice()">Найти</button>
+        </form>
+    </div>
+</nav>
+<div class="nav-side-menu">
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+
+    <div class="menu-list">
+
+        <ul id="menu-content" class="menu-content collapse out">
+            <li  data-toggle="collapse" data-target="#devices" class="collapsed active" onclick="formTable()">
+                <a ><i class="fa fa-laptop fa-lg"></i> Шлюзы <span class="arrow"></span></a>
+            </li>
+            <ul class="sub-menu collapse" id="devices">
+
+            </ul>
+
+            <li onclick="formAnalytic()">
+                <a >
+                    <i class="fa fa-line-chart fa-lg"></i> Аналитика
+                </a>
+            </li>
+            <li onclick="formNotifications()">
+                <a >
+                    <i class="fa fa-bell fa-lg"></i> Уведомления
+                    <span class="badge badge-error">0</span>
+                </a>
+            </li>
+            <li >
+                <a>
+                    <i class="fa  fa-dashboard fa-lg"></i> Настройки
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</div>
+<div id="content-panel" class="panel-content">
+    <div id="critical-value-panel">
+            <h1 style="float: left; width: 100%; color: black; font-size: 3vh;">Минимальное критическое значение:</h1>
+            <input type="text" class="form-control" required="true" id="min_critical_input" style="position: relative; left: 10%; float:left;width: 50%;">
+            <button type="button" id="save-min-btn" class="btn btn-success" style="float:left; position: relative; left: 10.4%; width: 25%;">Сохранить</button>
+
+            <h1 style="float: left;  width: 100%; color: black; font-size: 3vh;">Максимальное критическое значение:</h1>
+            <input type="text" class="form-control" required="true" id="max_critical_input" style="position: relative; left: 10%; float:left;width: 50%;">
+            <button type="button" id="save-max-btn" class="btn btn-success" style="float:left; position: relative; left: 10.4%; width: 25%;">Сохранить</button>
+    </div>
+    <div style="width: 100%; height: 45%; ">
+        <div class="demo-container">
+            <div id="gauge"></div>
+        </div>
+    </div>
+    <div style="width: 100%; height: 100%;  position: relative; top:32%;">
+        <div class="demo-container">
+            <div id="chart-demo">
+                <div id="chart"></div>
+                <div class="options">
+                    <div class="option">
+                        <div id="types"></div>
+                        <input type="text" id="date-picker" style="visibility:hidden">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<script>
+    $(function(){
+        $("#date-picker").datepicker({dateFormat: 'dd-mm-yy'});
+        $('#date-picker').on('change', function() {
+            alert($('#date-picker').val());
+        });
+        $("#gauge").dxCircularGauge({
+            scale: {
+                startValue: 50,
+                endValue: 150,
+                tickInterval: 10,
+                label: {
+                    useRangeColors: true
+                }
+            },
+            rangeContainer: {
+                palette: "pastel",
+                ranges: [
+                    { startValue: 50, endValue: 90 },
+                    { startValue: 90, endValue: 130 },
+                    { startValue: 130, endValue: 150 }
+                ]
+            },
+            title: {
+                text: "Temperature of the Liquid in the Boiler",
+                font: { size: 28 }
+            },
+            "export": {
+                enabled: true
+            },
+            value: 105
+        });
+    });
+    var types = ["День","Две недели","Выбрать день" ];
+    var dataSource = [{
+        date: new Date("October 13, 2014 00:13:00").toTimeString(),
+        value: 15
+    }, {
+        date: new Date("October 13, 2014 01:13:00").toTimeString(),
+        value: 23
+    }, {
+        date: new Date("October 13, 2014 02:13:00").toTimeString(),
+        value: 5
+    }, {
+        date: new Date("October 13, 2014 03:13:00").toTimeString(),
+        value: 18
+    }
+        , {
+            date: new Date("October 13, 2014 04:13:00").toTimeString(),
+            value: 18
+        }
+        , {
+            date: new Date("October 13, 2014 05:13:00").toTimeString(),
+            value: 18
+        }
+        , {
+            date: new Date("October 13, 2014 06:13:00").toTimeString(),
+            value: 18
+        }
+        , {
+            date: new Date("October 13, 2014 07:13:00").toTimeString(),
+            value: 18
+        }
+        , {
+            date: new Date("October 13, 2014 08:13:00").toTimeString(),
+            value: 18
+        }
+        , {
+            date: new Date("October 13, 2014 09:13:00").toTimeString(),
+            value: 18
+        }
+        , {
+            date: new Date("October 13, 2014 10:13:00").toTimeString(),
+            value: 18
+        }
+        , {
+            date: new Date("October 13, 2014 11:13:00").toTimeString(),
+            value: 18
+        }
+        , {
+            date: new Date("October 13, 2014 12:13:00").toTimeString(),
+            value: 18
+        }
+        , {
+            date: new Date("October 13, 2014 13:13:00").toTimeString(),
+            value: 18
+        }
+        , {
+            date: new Date("October 13, 2014 15:13:00").toTimeString(),
+            value: 18
+        }
+        , {
+            date: new Date("October 13, 2014 16:13:00").toTimeString(),
+            value: 18
+        }
+        , {
+            date: new Date("October 13, 2014 17:13:00").toTimeString(),
+            value: 18
+        }
+        , {
+            date: new Date("October 13, 2014 18:13:00").toTimeString(),
+            value: 18
+        }
+        , {
+            date: new Date("October 13, 2014 19:13:00").toTimeString(),
+            value: 18
+        }
+        , {
+            date: new Date("October 13, 2014 20:13:00").toTimeString(),
+            value: 18
+        }
+        ];
+    $(function(){
+        var chart = $("#chart").dxChart({
+            theme:'generic.contrast',
+            dataSource: dataSource,
+            commonSeriesSettings: {
+                type: "spline",
+                argumentField: "date"
+            },
+            commonAxisSettings: {
+                grid: {
+                    visible: true
+                }
+            },
+            argumentAxis: {
+                label: {
+                    format: "HH:mm:ss"
+                }
+            },
+            margin: {
+                bottom: 20
+            },
+            series: [
+                { valueField: "value", name: "Значения" },
+            ],
+            tooltip:{
+                enabled: true
+            },
+            legend: {
+                verticalAlignment: "top",
+                horizontalAlignment: "right"
+            },
+            "export": {
+                enabled: true
+            },
+            title: "График значений за день"
+        }).dxChart("instance");
+        $("#types").dxSelectBox({
+            dataSource: types,
+            value: types[0],
+            onItemClick: function(e){
+                if (e.itemData == "День")
+                {
+                    alert("den");
+                }
+                else if (e.itemData == "Две недели")
+                {
+                    alert("weel");
+                }
+                else if (e.itemData == "Выбрать день")
+                {
+                    $('#date-picker').datepicker("show");
+                }
+            }
+        });
+
+    });
+</script>
+
+</body>
+</html>
