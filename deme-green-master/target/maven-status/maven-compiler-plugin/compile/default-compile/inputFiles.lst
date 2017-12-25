@@ -1,49 +1,49 @@
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\controllers\DeviceContentController.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\model\sensor\SensorRequest.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\tools\RepositoryNameFormater.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\model\notification\Notification.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\repository\SensorParameterRepository.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\api\DeviceApiRestController.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\controllers\SensorContentController.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\controllers\WebPanelController.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\security\CustomAccessDeniedHandler.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\model\notification\NotificationCacheParameter.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\model\sensor\CriticalSensorValue.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\repository\SensorRepository.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\tools\SensorsExistingCache.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\Constants.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\model\sensor\Sensor.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\LoggFactory.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\tools\DevicesExistingCache.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\model\sensor\SensorResponse.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\tools\DataHandlerCache.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\security\SpringSecurityConfiguration.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\tools\UnreadNotificationCache.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\model\sensor\SensorDataRequest.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\DataServer.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\WebPanelApplication.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\api\SensorDataApiController.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\security\MongoAuthenticationProvider.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\model\security\User.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\model\sensor\SensorsValuesResponse.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\services\HeaderRequestInterceptor.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\tools\NotificationMessageFormater.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\model\device\ChangeNameRequest.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\services\DataServerManagerService.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\services\SensorStatusMonitorService.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\tools\ResponseContextUtil.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\api\TestController.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\model\sensor\UpdateCriticalValue.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\repository\CriticalValueRepository.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\model\sensor\SensorDayOfCriteria.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\services\DataHandlerService.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\security\SpringMongoConfig.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\tools\CriticalValues.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\repository\NotificationRepository.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\model\sensor\SensorParameter.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\controllers\NotificationContentController.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\model\device\Device.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\services\AndroidNotificationService.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\repository\DeviceRepository.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\api\SensorApiRestController.java
-D:\Work\Java\web-panel\src\main\java\com\ifedoroff\demo\repository\UserRepository.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/security/CustomAccessDeniedHandler.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/model/sensor/CriticalSensorValue.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/api/TestController.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/tools/NotificationMessageFormater.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/model/device/Device.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/controllers/WebPanelController.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/repository/SensorParameterRepository.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/repository/NotificationRepository.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/model/sensor/SensorDayOfCriteria.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/controllers/SensorContentController.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/LoggFactory.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/repository/DeviceRepository.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/services/DataHandlerService.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/DataServer.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/model/security/User.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/tools/CriticalValues.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/services/HeaderRequestInterceptor.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/controllers/NotificationContentController.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/controllers/DeviceContentController.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/model/sensor/SensorRequest.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/tools/RepositoryNameFormater.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/Constants.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/tools/ResponseContextUtil.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/model/sensor/SensorResponse.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/api/DeviceApiRestController.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/model/notification/NotificationCacheParameter.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/repository/CriticalValueRepository.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/model/sensor/SensorsValuesResponse.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/services/SensorStatusMonitorService.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/model/device/ChangeNameRequest.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/repository/UserRepository.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/api/SensorApiRestController.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/api/SensorDataApiController.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/WebPanelApplication.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/model/sensor/UpdateCriticalValue.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/repository/SensorRepository.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/model/sensor/Sensor.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/services/AndroidNotificationService.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/model/sensor/SensorDataRequest.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/services/DataServerManagerService.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/security/SpringSecurityConfiguration.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/model/notification/Notification.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/tools/DataHandlerCache.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/tools/UnreadNotificationCache.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/security/SpringMongoConfig.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/model/sensor/SensorParameter.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/security/MongoAuthenticationProvider.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/tools/DevicesExistingCache.java
+/Users/andreyblonskiy/Documents/KPI/Mazur/embedded program systems/specialForKPI/deme-green-master/src/main/java/com/ifedoroff/demo/tools/SensorsExistingCache.java

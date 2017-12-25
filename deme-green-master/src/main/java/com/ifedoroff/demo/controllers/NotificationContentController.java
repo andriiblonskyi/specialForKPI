@@ -13,9 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-/**
- * Created by Rostik on 31.07.2017.
- */
+
 @RestController
 @RequestMapping("/content")
 public class NotificationContentController {

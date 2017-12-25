@@ -12,9 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-/**
- * Created by Rostik on 29.07.2017.
- */
+
 @RestController
 @RequestMapping("/content")
 public class DeviceContentController {

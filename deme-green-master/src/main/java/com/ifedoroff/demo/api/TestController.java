@@ -8,9 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-/**
- * Created by Rostik on 02.08.2017.
- */
+
 @RestController
 @RequestMapping("api/store")
 public class TestController {

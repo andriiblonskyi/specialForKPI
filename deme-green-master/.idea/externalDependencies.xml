@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalDependencies">
+    <plugin id="Lombook Plugin" />
+    <plugin id="com.intellij.vaadin" />
+    <plugin id="com.vaadin.designer.intellij" />
+    <plugin id="com.vaadin.designer2.intellij" />
+  </component>
+</project>

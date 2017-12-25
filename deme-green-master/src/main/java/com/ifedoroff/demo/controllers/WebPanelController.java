@@ -7,9 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.Map;
 
-/**
- * Created by Rostik on 27.07.2017.
- */
 @Controller
 public class WebPanelController {
 
